@@ -1,0 +1,36 @@
+.container{
+    background-color: dimgray;
+    border: medium solid black;
+    width: 80%;
+    height: 80%;
+    /*indica que el contenedor va a utilizar grid css*/
+    display: grid;
+    /*ejemplo de tre por tres*/
+    grid-template-rows: 33% 33% 34%;
+    grid-template-columns: 33% 33% 34%;
+}
+.item{
+    padding: 5px;
+    font-size: 14px;
+    border-color:palevioletred;
+    border: medium solid whitesmoke;
+}
+
+body{
+    background-color: cadetblue;
+    font-size: 16px;
+    font-family: sans-serif;
+
+}
+.container .item:nth-child(1){
+    color: aqua;
+    /*primera forma*/
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-column-end: 2;
+
+    /*seguda forma
+    a logica siempre sera de esta manera row-star/ column-star/ row-end/ column-end
+    grid-area: 1/1/2/7;*/
+}
